@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html lang="en" ng-app="cv">
+<head>
+	<title>Modern CV</title>
+
+	<link rel="stylesheet"  href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+	<script>
+		var cv = {
+			'v' : 0.1,
+			'details': {
+				'firstName': 'Ivan',
+				'lastName' : 'du Toit',
+				'profile': 'http://moderncv.com/profile/ivan-du-tiot',
+
+				'nationality' : 'South African',
+				'Date of Birth' : '28 April 1990',
+				'Marital status' : 'Single',
+				'Address' :	'347 Umgeni Street, Erasmuskloof x4, Pretoria, South Africa',
+				'Cell' : '(+27)760926242',
+				'E-Mail' : 'Ivan@tryfinally.co.za',
+				'bio': 'I love to learn new things and enjoy sharing that feeling by teaching others.'
+
+				'links': [
+					{'desciption': 'Github Profile', 'url': 'http://github.com/ivan-du-toit'},
+					{'desciption': 'Blog', 'url': 'http://ivandutoit.blogspot.com/'},
+					{'desciption': 'Google Plus Profile', 'url': 'https://plus.google.com/+IvanduToit'},
+					{'desciption': 'Linkedin Profile', 'url': 'http://www.linkedin.com/profile/view?id=47091934'}
+				]
+			}
+			'items': 
+			{
+				'alfega' : {
+					'title':'Alfega Technologies',
+					'description': 'Started as a junior web developer, then took on more responsibilities which transitioned into taking the lead developer position on the content management system (EasyCE) that the company was developing.'
+					'categories': ['Jobs'],
+					'related': [],
+					'references': [],
+
+					'meta_period': {'start': '2007-07-01', 'end': '2011-01-31'} 
+				},
+				'study' : {
+					'title':'Studing at the University of Pretoria',
+					'description': 'Completing my BSc Computer Science at the University of Pretoria.'
+					'categories': ['Education'],
+					'related': [],
+					'references': [],
+
+					'meta_period': {'start': '2011-02-07', 'end': ''} 
+				},
+				'tutor' : {
+					'title':'Tutoring at the University of Pretoria',
+					'description': 'Started as a junior web developer, then took on more responsibilities which transitioned into taking the lead developer position on the content management system (EasyCE) that the company was developing.'
+					'categories': ['Jobs'],
+					'related': [],
+					'references': [],
+
+					'meta_period': {'start': '2012-02-07', 'end': '2012-11-07'} 
+				}
+			},
+			'categories': {
+				'Jobs': {
+					'title': 'Jobs'
+					'desc': 'All the for payment occupations that I had.'
+				},
+				'Education': {
+					'title': 'Education'
+					'desc': 'The entries in this category is for all the formal education that I have recieved.'
+				}
+			}
+		};
+	</script>
+	<style>
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="content">
+			<nav class="navbar navbar-default" role="navigation">
+	  			<div class="navbar-header">
+	   				<a class="navbar-brand" href="#">Ivan du Toit's CV</a>
+	  			</div>
+
+	  			<!-- Collect the nav links, forms, and other content for toggling -->
+	  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    			<form class="navbar-form navbar-right" role="search">
+	      				<div class="form-group">
+	        				<input type="text" class="form-control" placeholder="Search">
+	      				</div>
+	      				<button type="submit" class="btn btn-default">Search</button>
+	    			</form>
+	  			</div>
+			</nav>
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>

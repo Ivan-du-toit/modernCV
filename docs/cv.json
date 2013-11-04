@@ -1,0 +1,43 @@
+{
+	'v' : 0.1,
+	'details': {//Any key:value pair will be printed here if the vlaue is a string. All objects are assumed to be complex extensions and will have to have more complex rendering functions
+		'firstName': 'Ivan', //Required
+		'lastName' : 'du Toit', //Required
+		'profile': 'http://moderncv.com/profile/ivan-du-tiot' //Required
+
+		'bio': 'A short description or overview of the person' //Optional
+		'email': 'anilihst@gmail.com', //Optional
+		'cel': '0760926242', //Optional
+
+		'links': [
+			{'desciption': 'This is a link desc', 'url': 'http://github.com', 'image': 'http://link.to/image'},
+			{'desciption': 'This is another link desc', 'url': 'http://google.com'}
+		]
+	}
+	'items': 
+	{
+		'first' : {
+			'title':'This is the item title', //Required
+			'description': 'This is the description of this item', //Required
+			'categories': ['misc', 'items'], //Required can be empty
+			'related': ['first'], //Required can be empty
+			'references': ['Ref1'], //Optional
+
+			'meta_rating': { //Meta prefixed entries are optionally rendered and the entry should make sense if the template does not sopport that meta type
+				'range': 10,
+				'rating': 7,
+				'ext_desc_rating': {'desc': 'This is the description of the rating.'} //This is the extension of the meta which can also add more information if the renderer supports it.
+			} 
+		}
+	},
+	'categories': {
+		'misc': {
+			'title': 'Miscellaneous' //Required
+			'desc': 'Odds and ends' //Required
+
+			'meta_links': ['http://lmgtfy.com/?q=Miscellaneous'] //Optional
+		},
+		'items': {'...'}
+	},
+	'extensions': [{'name': 'meta_rating', 'link': 'http://metarating.com'}]
+};
